@@ -101,3 +101,119 @@ def myfunc():
 myfunc()
 
 print("Python is " + x)
+
+#convert type
+x = 1    # int
+y = 2.8  # float
+z = 1j   # complex
+
+#convert from int to float:
+a = float(x)
+
+#convert from float to int:
+b = int(y)
+
+#convert from int to complex:
+c = complex(x)
+
+print(a)
+print(b)
+print(c)
+
+print(type(a))
+print(type(b))
+print(type(c))
+
+#random Number
+import random
+
+print(random.randrange(1, 10))
+
+#multiline strings
+a = """Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua."""
+print(a)
+
+#strings are array
+a = "Hello, World!"
+print(a[1])
+
+#looping through a string
+for x in "banana":
+  print(x)
+
+#string length
+a = "Hello, World!"
+print(len(a))
+
+#check string
+txt = "The best things in life are free!"
+print("free" in txt)
+
+txt = "The best things in life are free!"
+if "free" in txt:
+  print("Yes, 'free' is present.")
+
+#check if not in string
+txt = "The best things in life are free!"
+if "expensive" not in txt:
+  print("No, 'expensive' is NOT present.")
+
+# format string
+price = 59
+txt = f"The price is {price:.2f} dollars"
+print(txt)
+
+"""
+f"teks {variabel}"	Cara paling mudah dan cepat untuk gabungkan string dan data
+{price:.2f}	Menampilkan angka desimal dengan 2 digit di belakang koma
+{20 * 59}	Bisa langsung pakai operasi matematika di dalam {}
+"""
+
+#escape character
+escape = "hello \"world\""
+print(escape)
+
+"""
+\'	Single Quote
+\\	Backslash
+\n	New Line
+\r	Carriage Return
+\t	Tab
+\b	Backspace
+\f	Form Feed
+\ooo	Octal value
+\xhh	Hex value
+"""
+#boolean type
+print(bool("abc"))         # True
+print(bool(123))           # True
+print(bool(["apple"]))     # True
+
+print(bool(False))  # False
+print(bool(None))   # False
+print(bool(0))      # False
+print(bool(""))     # False
+print(bool([]))     # False
+
+x = 200
+print(isinstance(x, int))  # True <- fungsi built-in untuk cek tipe data dalam output bool
+
+#list items
+"""
+List items are ordered, changeable, and allow duplicate values.
+example:
+"""
+thislist = ["apple", "banana", "cherry"]
+print(thislist)
+
+thislist = ["apple", "banana", "cherry"]
+print(len(thislist)) #To determine how many items a list has, use the len() function:
+
+thislist = list(("apple", "banana", "cherry"))#list constructor to make list
+print(thislist)
+
+mylist = ["apple", "banana", "cherry"]
+print(type(mylist))#check data type
