@@ -176,7 +176,7 @@ f"teks {variabel}"	Cara paling mudah dan cepat untuk gabungkan string dan data
 escape = "hello \"world\""
 print(escape)
 
-"""
+r"""
 \'	Single Quote
 \\	Backslash
 \n	New Line
@@ -217,3 +217,33 @@ print(thislist)
 
 mylist = ["apple", "banana", "cherry"]
 print(type(mylist))#check data type
+
+
+#change item list
+
+thislist = ["apple", "banana", "cherry"]
+thislist[1:2] = ["blackcurrant", "watermelon"] #<- slice dari indeks 1 sampai sebelum indeks 2
+print(thislist)
+
+#insert -> menyisipkan
+thislist = ["apple", "banana", "cherry"]
+thislist.insert(2, "watermelon")
+print(thislist)
+
+#append -> menambahkan dengan indeks terakhir
+thislist = ["apple", "banana", "cherry"]
+thislist.append("orange")
+print(thislist)
+
+#extend ->menggabungkan beberapa list
+thislist = ["apple", "banana", "cherry"]
+tropical = ["mango", "pineapple", "papaya"]
+thislist.extend(tropical)
+print(thislist)
+
+#extend tidak harus menggabungkan sama sama list tapi bisa juga dengan tupple, distionary, etc.
+thislist = ["apple", "banana", "cherry"] # <- list
+thistuple = ("kiwi", "orange") #<- tupple
+thislist.extend(thistuple)
+print(thislist)
+
