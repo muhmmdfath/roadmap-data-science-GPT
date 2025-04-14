@@ -247,3 +247,31 @@ thistuple = ("kiwi", "orange") #<- tupple
 thislist.extend(thistuple)
 print(thislist)
 
+#remove list
+thislist = ["apple", "banana", "cherry"]
+thislist.remove("banana") #<- jika terdapat 2 item yang ditemukan dalam list maka akan menghapus item pertama
+print(thislist)
+
+#remove specified index
+thislist = ["apple", "banana", "cherry"]
+thislist.pop(1) #<- jika kosong maka akan menghapus indeks terakhir
+print(thislist)
+
+#del keyword alse remove specified index
+thislist = ["apple", "banana", "cherry"]
+del thislist[0]
+print(thislist)
+
+#del keyword also can delete the list closely
+thislist = ["apple", "banana", "cherry"]
+del thislist
+
+#mengosongkan isi list
+thislist = ["apple", "banana", "cherry"]
+thislist.clear()
+print(thislist)
+
+#Looping Using List Comprehension
+thislist = ["apple", "banana", "cherry"]
+[print(x) for x in thislist]
+
