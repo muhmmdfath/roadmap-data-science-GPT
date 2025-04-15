@@ -275,3 +275,75 @@ print(thislist)
 thislist = ["apple", "banana", "cherry"]
 [print(x) for x in thislist]
 
+#without list comprehesion
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = []
+
+for x in fruits:
+  if "a" in x:
+    newlist.append(x)
+
+print(newlist)
+
+#with list comprehession
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = [x for x in fruits if "a" in x]
+print(newlist)
+
+#sintaks
+#newlist = [expression for item in iterable if condition]
+
+#contoh lain
+#Filter: hanya ambil yang bukan "apple"
+newlist = [x for x in fruits if x != "apple"]
+#Tanpa kondisi (ambil semua)
+newlist = [x for x in fruits]
+#Gunakan range():
+newlist = [x for x in range(10)]
+#Hanya ambil angka < 5:
+newlist = [x for x in range(10) if x < 5]
+
+
+#Ubah Nilai (Expression)
+#Ubah semua ke huruf besar:
+newlist = [x.upper() for x in fruits]
+#Semua jadi "hello":
+newlist = ['hello' for x in fruits]
+#Ganti "banana" jadi "orange":
+newlist = [x if x != "banana" else "orange" for x in fruits]
+
+
+#sorting
+thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
+thislist.sort() #ascending default, if want to descending thislist.sort(reverse = True)
+print(thislist)
+
+#custom list
+def myfunc(n):
+  return abs(n - 50) #menghitung jarak(selisih n dengan 50)
+
+thislist = [100, 50, 65, 82, 23] #100-50 = 50, 50-50 = 0, 65-50 = 15, 82-50 = 32, 23-50 = -27 (abs merubah negatif agar tetap positif)
+thislist.sort(key = myfunc)
+print(thislist)
+
+# capital letters being sorted before lower case letters:
+
+#reverse
+fruits = ["apple", "banana", "cherry"]
+fruits.reverse() #membalikkan urutan list yang sudah ada, tanpa mengurutkan, beda dengan sort(reverse = True)
+print(fruits)
+
+#copy list
+thislist = ["apple", "banana", "cherry"]
+mylist = thislist.copy() #membuat list baru dengan isi list sama sebperti yang ingin di copy
+print(mylist)
+
+#atau bisa juga menggunakan list
+thislist = ["apple", "banana", "cherry"]
+mylist = list(thislist)
+print(mylist)
+
+#use slice operator
+thislist = ["apple", "banana", "cherry"]
+mylist = thislist[:]
+print(mylist)
